@@ -34,41 +34,6 @@ body {
 </head>
 <body>
   <div id="rain-container"></div>
-  <script>
-   document.addEventListener("DOMContentLoaded", function() {
-  const container = document.getElementById("rain-container");
-  const numRaindrops = 100;
-  const images = ['./resources/images/flower1.jpg',
-   './resources/images/flower2.jpg',
-    './resources/images/flower3.jpeg',
-     './resources/images/flower4.jpeg',
-      './resources/images/flower5.jpeg']; // Replace with your image paths
-
-  // Create and append raindrops to the container
-  for (let i = 0; i < numRaindrops; i++) {
-    const raindrop = document.createElement("div");
-    raindrop.classList.add("raindrop");
-    
-    // Randomly select an image path
-    const randomIndex = Math.floor(Math.random() * images.length);
-    const randomImagePath = images[randomIndex];
-    raindrop.style.backgroundImage = `url('${randomImagePath}')`;
-    
-    // Randomize initial position and animation duration
-    const delay = Math.random() * 3;
-    const duration = Math.random() * 4 + 2; // Adjust this value to make the rain slower
-    const x = Math.random() * window.innerWidth;
-    const y = Math.random() * window.innerHeight;
-    
-    raindrop.style.left = `${x}px`;
-    raindrop.style.top = `${y}px`;
-    raindrop.style.animationDelay = `${delay}s`;
-    raindrop.style.animationDuration = `${duration}s`;
-    
-    container.appendChild(raindrop);
-  }
-});
-
-  </script>
+  
 </body>
 </html>
