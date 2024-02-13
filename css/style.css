@@ -1,0 +1,115 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+ }
+
+ body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+.mail{
+    border: 2px solid black;
+    width: 33em;
+    height: 19em;
+}
+.mailcover-smaller {
+    border: 1.5px solid rgba(0, 0, 0, 0.838);
+    border-radius: 30% 70% 44% 56% / 0% 0% 100% 100%;
+    width: 100%;
+    background-color: white;
+    height: 15%;
+}
+
+.mailcover {
+    border: 1px solid rgba(0, 0, 0, 0.817);
+    border-radius: 2px 48px 266px 301px / 0px 0px 150px 133px;
+    width: 100%;
+    background-color: white;
+    height: 50%;
+    transform: perspective(1000px) rotateX(0deg); 
+    transform-origin: top;
+    transition: transform 1s ease;
+    }
+    
+.flip .mailcover {
+    transform: perspective(1000px) rotateX(120deg);
+}
+
+.dissapear .dikit{
+    display: none;
+}
+    
+
+#jeje{
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+.content{
+    display: none; 
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    position: fixed;
+    border: 1px solid black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: popupAnimation 0.5s forwards;
+  }
+
+  .raindrop {
+    position: absolute;
+    z-index: 0;
+    border-radius: 33% 45% 13% 32% / 15% 43% 18% 53%;
+    width: 5em;
+    border: 1px solid black;
+    height: 5em;
+    background-size: cover;
+    animation: rain linear infinite;
+  }
+
+@keyframes rain {
+    from {
+      transform: translateY(-100px);
+    }
+    to {
+      transform: translateY(100vh);
+    }
+  }
+  
+  @keyframes popupAnimation {
+    0% {
+      width: 0;
+      height: 0;
+    }
+    100% {
+      width: 60vw;
+      height: 80vh;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .raindrop {
+      width: 3em;
+      height: 3em;
+    }
+    .html{
+        font-size: 90%;
+    }
+  }
